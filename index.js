@@ -130,7 +130,7 @@ app.post('/textupload', checkAuthenticated, (req, res) => {
         var arrayedCode = getCode(filename, "array")
         var codeFeedback = codeanalysis.fileanalysis(code,arrayedCode)
        var variableIssues = codeanalysis.issueAnalysis(code)
-    
+
 
         varFeedback.set(filename,codeFeedback)
         updatedAnalysis = graphAnalysis.get(req.user.name)
@@ -259,4 +259,4 @@ function authRole(role) {
     next()
   }
 }
-app.listen(3000)
+app.listen(process.env.PORT || 3000)
