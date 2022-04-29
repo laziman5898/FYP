@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Task Selection Mockup </title>
+
+  <!-- Bootstrap -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  <!-- Css relation  -->
+  <link rel="stylesheet" href="css\style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark ">
+    <div class="container-fluid">
+
+
+      <!-- Section containg code for off screen left list -->
+      <section id="leftlist">
+
+        <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
+
+        <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"></h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+
+          <div class="offcanvas-body">
+            <h1 class="offcanvas-account">Your Account</h1>
+
+            <ul class="list-group list-group-flush">
+
+              <li class="list-group-item list-group-item-action"><a href="menus/dashboard.html">Dashboard</a></li>
+              <li class="list-group-item list-group-item-action"><a href="#">Feedback</a></li>
+              <li class="list-group-item list-group-item-action"><a href="#">Reccomended Tasks</a></li>
+              <li class="list-group-item list-group-item-action"><a href="#">Worklog</a></li>
+              <li class="list-group-item list-group-item-action"><a href="#">Help and FAQ</a></li>
+              <li class="list-group-item list-group-item-action"><a href="#">Logou</a></li>
+
+            </ul>
+          </div>
+      </section>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="C:\Users\Lerai\OneDrive\Desktop\Uni Work\Individual Project\WebApplication\index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Coding Playground</a>
+          </li>
+          <li class="nav-item dropdown right">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="novicetopbar">
+    <div class="">
+      <h1>Coding Practices</h1>
+      <p></p>
+    </div>
+  </section>
+
+  <!-- Sidebar navigation -->
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group pagelength" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action active" id="list-creatingvariables-list" data-bs-toggle="list" href="#list-naming" role="tab" aria-controls="list-home">Good Variable Naming Conventions</a>
+        <a class="list-group-item list-group-item-action " id="list-int-list" data-bs-toggle="list" href="#list-int" role="tab" aria-controls="list-home">Int Literals</a>
+        <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list" href="#list-functionLength" role="tab" aria-controls="list-profile">Function Length and Cohesion</a>
+        <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list" href="#list-commenting" role="tab" aria-controls="list-messages">Good use of Commenting</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-deepNesting" role="tab" aria-controls="list-settings">Deep Nesting</a>
+        <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list" href="#list-comingSoon" role="tab" aria-controls="list-settings">Coming Soon</a>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent">
+
+        <!-- Naming and creating variables Section -->
+
+        <div class="tab-pane fade show active" id="list-naming" role="tabpanel" aria-labelledby="list-creatingvariables-list">
+          <h2>Naming and creating variables</h2>
+          <h4>What is a variable</h4>
+          <p>A variable is data container which will store the value of what its has been assigned to within its java program. Variables are assigned a data type which will designate the type of which the value it can hold for example if you wished
+            to store an numeric value you could store it as an interger </br> <span>Note: for more information on data types please see the data type lesson </span>
+          </p>
+          <h4>When to use variables</h4>
+          <p>Whenever a piece of information is needed to be stored it should be contained in a variable this could range from a ... </p>
+          <h4>Variable Syntax </h4>
+          <p> datatype variableName = value ; <br><em>Example:</em> Int Age = 10 ; </p>
+          <h4>Improving your code as a programmer </h4>
+          <p>With regards to variables there are multiple things which programmers can do in order to aid and improve there effciency and coding throughout the scope of the program in which they are creating some of these are :</p>
+          <ul>
+            <li>Naming conventions</li>
+            <li>Use of Camal Casing</li>
+            <li>Code Consistency</li>
+            <li>Commenting the use of and need of the variable</li>
+          </ul>
+
+          <a href="./nameChecker"><button type="button" class="btn btn-outline-success attempt-task-btn">Attempt Tasks</button></a>
+        </div>
+
+
+        <div class="tab-pane fade" id="list-functionLength" role="tabpanel" aria-labelledby="list-profile-list">
+          <h2>Function Length</h2>
+          <p>From research function length has a direct correlation to debugging time meaning the longer the functions the longer it takes
+            to successully debug the code </p>
+          <h4>Rule of 30</h4>
+          If an element consists of more than 30 subelements, it is highly probable that there is a serious problem:
+          <ol>
+            <li>Methods should not have more than an average of 30 code lines (not counting line spaces and comments).</li>
+            <li>A class should contain an average of less than 30 methods, resulting in up to 900 lines of code.</li>
+            <li>A package shouldn’t contain more than 30 classes, thus comprising up to 27,000 code lines.</li>
+            <li>Subsystems with more than 30 packages should be avoided. Such a subsystem would count up to 900 classes with up to 810,000 lines of code.</li>
+            <li>A system with 30 subsystems would thus possess 27,000 classes and 24.3 million code lines.</li>
+          </ol>
+
+
+          <h2>Function Cohesion</h2>
+          <p>By striving rule of 30 and maintaing a structure in where methods should be no longer then 30 lines of code coders can be forced to aim for higher cohesion however some shorter functions
+            will still not bear cohesion in mind as they will fulfill the condition of rule of 30. Each line in the codes function should have purpose and if the function can be condensed it will allow faster
+            performace, cohesion and readabilty.</p>
+
+          <h3>Summary</h3>
+          <p>Functions should : </p>
+          <ul>
+            <li>Aim to have high cohesion</li>
+            <li>Aim to have a reason for each line within the function</li>
+            <li>Aim to implement the rule of 30 </li>
+            <li>Functions should be refactored upon completion to allow for better performace, cohesion and readabilty</li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="list-commenting" role="tabpanel" aria-labelledby="list-messages-list">
+          <h1>Good use of commenting</h1>
+          <p>
+            Commenting is crucial when allowing yourself or other users to understand the code quicker and faster especially in regards to code residing over 100 lines.
+            Simply commenting every variable and every function can result to a convoluted piece of code as suppopse to beautiful code which is what we are aiming for and in order to achieve that a balance is required.
+          </p>
+
+          <h3>The Balance</h3>
+          <p>To achieve a balance a guidline of rules can be aimed for in order to allow better commenting within code these are as follows :</p>
+          <ul>
+            <li><strong>Explaining logic in a clear and understandable manor</strong>. This is done by avoiding jargon when possible and making explanations readable to non-programmers</li>
+            <li><strong>Spacing and logical grouping</strong>.The spacing and logical grouping should include things such as parsing data,solving a particular subprogram or displaying results</li>
+            <li><strong>Keep comments up to date</strong>. Outdated comments can lead to confusion for both the programmer and anyone attmepting to understand it </li>
+            <li><strong>Avoid obvious comments</strong>. To many comments can lead to a cognitive overload for anyone attmepting to understand the comments </li>
+            <li><strong>Where possible re-factor the code so commenting is not needed</strong>. Beautiful code is self-explanatory meaning if the code is refactored to perfection it should not need a comment to describe its purpose</li>
+          </ul>
+        </div>
+        <div class="tab-pane fade" id="list-int" role="tabpanel" aria-labelledby="list-messages-list">
+<h1>Literals</h1>
+<p>Literals are a simple concept, simply to improve readabilty to the user, they do not improve effciency nor functionality however they allow reading long intergers above 3 digits to be more comprehensive for humans</p>
+<h4>The Concept</h4>
+<p>The concept of literals is simple, it requires inputting '_' between the use of all ints and floats upon every three digits.An example of it being constructed is below</p>
+<p><em>Example of no use of literals :</em> <strong>int numberValue = 1234556789 ;</strong>
+<br><em>Example of literals:</em> <strong>int numberValue = 123_456_789 ; </strong></p>
+<p>This proccess does sound tedious however it has shown to improve readabilty for users who incorporate this feature into their code. This feature should only be used on pre-defined variables with lengths over 3 digits otherwise
+much like commenting, overuse of this feature can indeed lead to confusion. </p>
+
+        </div>
+        <div class="tab-pane fade" id="list-deepNesting" role="tabpanel" aria-labelledby="list-settings-list">
+          <h1>Deep Nesting</h1>
+          <p>Deep Nesting is the principle of having loops/Nesting within a loop or a nest, the concept of Deep nesting is having multiple loops inside each other resulting in multiple nests.
+            Deep nesting can equate to code having slower performace and a longer debugging process as each nest will need to be thourougly analysed to gain an understanding of what each nest does and the errors it contains. </p>
+          <h4>Avoiding Deep Nesting </h4>
+          <p>Although in some cases nesting is required, the degree of the nesting scenario should be no greater then 3. Methods that can be implemented to help achieve this are : </p>
+          <ul>
+            <li><strong>Consider if the loop should be a function which returns an output of what you are trying to achieve </strong>. This will improve the cohiesion of the code whilst also improving the debugging process</li>
+            <li><strong>Reconsider the loops constructed and their purpose, and potentially adjust the structue of the loops</strong>. In most cases a simple refactor making the code more efficent will result in pointless loops being removed</li>
+            <li><strong>Refactoring the entire project</strong>. if there are no other methods that can be used except multiple loops it would suggest the hierarchy of the code needs ammending to a more effcient manor</li>
+          </ul>
+        </div>
+
+        <div class="tab-pane fade" id="list-comingSoon" role="tabpanel" aria-labelledby="list-settings-list">
+          <h1>Soon to come</h1>
+          <ul>
+            <li>Use of try/catch block statements</li>
+            <li>Differentiating the difference between floats and intergers and when to use them</li>
+            <li>Differentiating the difference between "" and '' </li>
+            <li>Variable Access</li>
+            <li>Redundant Labelling</li>
+            <li>Black-Box Testing</li>
+            <li>Local Variables and Global Variables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

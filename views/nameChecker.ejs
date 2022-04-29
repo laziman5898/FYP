@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Name Checker </title>
+</head>
+
+<body>
+  <h1>Name Checker</h1>
+
+  <form class="" action='/namechecker' method="POST">
+    <label for="Name"> Name of variable :</label>
+    <input type="text" name="variablename" value="">
+    <button type="submit">Submit</button>
+  </form>
+
+  <h3>Feedback</h3>
+  <p>
+    <% if(feedback==""){%> <%}else {%>
+
+
+
+    <%=feedback%>
+    <%if(feedback=="bad") {%><br> <a href="./codingpractices">Click here for guidance on variables</a> <%}%>
+    <%}%>
+    </p>
+
+  </body>
+</html>

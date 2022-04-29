@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Welcome Page</title>
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  <!-- Css relation  -->
+  <link rel="stylesheet" href="\css\style.css">
+
+  <!-- Icon relation -->
+  <script src="https://kit.fontawesome.com/3f16c6691c.js" crossorigin="anonymous"></script>
+</head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-dark ">
+      <div class="container-fluid">
+
+<!-- Section containg code for off screen left list -->
+        <section id="leftlist">
+
+          <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop"><i class="bi bi-alarm"></i> Menu</button>
+
+          <div class="offcanvas offcanvas-start " tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel"></h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <h1 class="offcanvas-account">Welcome <%= name %></h1>
+
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item list-group-item-action"><a href="/dashboard">Dashboard</a></li>
+                <li class="list-group-item list-group-item-action"><a href="/feedback">Feedback</a></li>
+                <li class="list-group-item list-group-item-action"><a href="/codingpractices">Coding Practices</a></li>
+                <li class="list-group-item list-group-item-action"><a href="/textupload">Upload</a></li>
+                <li class="list-group-item list-group-item-action"><a href="/nameChecker">Variable Name Checker</a></li>
+                    <% if(role=="teacher"){%>
+                      <br>
+                      <h4 class="offcanvas-account">Admin Restrictions</h4>
+                <li class="list-group-item list-group-item-action"><a href="/editbrain">Add to Brain</a></li>
+                <li class="list-group-item list-group-item-action"><a href="/viewuploaded">View Uploaded Work </a></li>
+                <li class="list-group-item list-group-item-action"><a href="/studenttendencies">View Student Tendencies </a></li>
+                    <%}%>
+              </ul>
+
+            </div>
+        </section>
+<!-- End of offscreen navigation code -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <form class="d-flex" action="/logout?_method=DELETE" method="POST">
+        <button class="btn btn-outline-danger" type="submit" name="logout">Logout</button>
+      </form>
+    </nav>
+
+
+    <h1>Hello <%= name %></h1>
+
+    <div class="">
+      <a href="/textupload">upload text</a>
+    </div>
+
+    <% if(role=="teacher"){%>
+
+    <p>You are a teacher </p>
+    <a href="./admin">Teacher Privliges</a>
+
+    <%}%>
+  </body>
+</html>
